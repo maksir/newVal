@@ -1,5 +1,10 @@
 ﻿namespace NewControls.Values
 {
+    /// <summary>
+    /// общий абстрактный класс
+    /// с реализованным приведением типов для упрощения создания фиксированных значений
+    /// </summary>
+    /// <typeparam name="T">тип значения</typeparam>
     public abstract class Val<T> : IVal
     {
         public abstract T GetVal(IValProvider vp);
