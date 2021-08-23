@@ -9,5 +9,7 @@
         public Val<int> Value { get; set; }
         
         public Val<string> Styles { get; set; }
+        
+        public Val<string> Color { get; set; }
     }
 }

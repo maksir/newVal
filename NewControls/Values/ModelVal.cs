@@ -9,10 +9,7 @@
             _name = name;
         }
 
-        public override T GetVal(IValProvider vp)
-        {
-            return vp.GetModelVal<T>(_name);
-        }
+        public override T GetVal(IValProvider vp) => vp.GetModelVal<T>(_name);
 
         public static ModelVal<T> Create(string name) => new ModelVal<T>(name);
     }

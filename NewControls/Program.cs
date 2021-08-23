@@ -15,19 +15,21 @@ namespace NewControls
             // Стандартная кнопка с фиксированными лейблом и значением
             var bNormal = new Button()
             {
-                Name = "ButtonAction",
-                ScopeName = null,
-                Label = "Закрыть",
-                Value = 44
+                Name = "ButtonAction", // фиксированная привязка к свойству модели
+                ScopeName = null, // без скоупа
+                Label = "Закрыть", //фиксированный лейбл
+                Value = 44, // фиксированное значение
+                Color = "green" // фиксированный цвет кнопки
             };
             
-            // Кнопка, где лейбл и значение берутся из модели
+            // Кнопка, где лейбл и значение берутся из модели, а цвет из темы оформления
             var bModel = new Button()
             {
                 Name = "ButtonAction",
                 ScopeName = null,
                 Label = ModelVal<string>.Create("ActionLabel"),
-                Value = ModelVal<int>.Create("ActionValue")
+                Value = ModelVal<int>.Create("ActionValue"), 
+                Color = ThemeVal<string>.Create("btn.default")
             };
         }
     }
